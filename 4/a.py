@@ -21,7 +21,7 @@ k2 = []
 for j in s:
     j = j.split()
     x,y = float(j[0]), float(j[1])
-    if y > 6:
+    if x < 6:
         k1.append([x,y])
     else: k2.append([x,y])
 
