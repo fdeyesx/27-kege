@@ -52,8 +52,9 @@ a.append(float(dia(k5)))
 a.append(float(dia(k6)))
 a.append(float(dia(k7)))
 
-print(min(a)*10_000)
+print(min(a)*100_000)
 s1 = 0
 for i in a:
-    s1 += float(i)
-print(s1//7)
+    s1 += i
+print( (s1/7) * 100_000)
+
