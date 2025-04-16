@@ -1,4 +1,4 @@
-def d(x1,x2,y1,y2):
+def d(x1,y1,x2,y2):
     return ( (x1-x2)**2 + (y1-y2)**2 )**0.5
 
 def dia(k):
@@ -8,7 +8,7 @@ def dia(k):
         tx,ty = k[i][0], k[i][1]
         for j in range(len(k)):
             px, py = k[j][0], k[j][1]
-            s = d(tx,px,ty,py)
+            s = d(tx,ty,px,py)
             if s > mx:
                 mx = s
     return mx
@@ -36,9 +36,9 @@ a.append(float(dia(k2)))
 a.append(float(dia(k3)))
 a.append(float(dia(k4)))
 
-print(min(a)*10_000)
+print(min(a)*100_000)
 s1 = 0
 for i in a:
-    s1 += float(i)
-print(s1//4)
+    s1 += i
+print( (s1/4) * 100_000)
 
